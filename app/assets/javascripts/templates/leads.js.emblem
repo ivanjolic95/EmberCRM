@@ -1,0 +1,11 @@
+article#leads
+	h1
+		| Leads
+		link-to 'leads.new' | New Lead
+	view Ember.TextField value=search placeholder="Search..." classNames="search"
+	ul
+		each lead in leads
+			link-to 'lead' lead tagName="li"
+				lead.fullName
+
+outlet
